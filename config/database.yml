@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: binary_buddies_development
+  template: template0
+
+test:
+  adapter: postgresql
+  database: binary_buddies_test
+  template: template0
