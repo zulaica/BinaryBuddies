@@ -1,0 +1,32 @@
+<% if @buddies.any? %>
+<section>
+  <dl>
+    <% @buddies.each do |buddy| %>
+    <dt>Name: <%= buddy.name %></dt>
+    <dd>Food level: <%= buddy.food_level %></dd>
+    <dd>Sleep level: <%= buddy.sleep_level %></dd>
+    <dd>Activity level: <%= buddy.activity_level %></dd>
+    <% end %>
+  </dl>
+</section>
+<% end %>
+
+<section>
+  <form action="/buddies" method="post">
+    <fieldset>
+      <legend>Adopt a buddy!</legend>
+      <label>Name your buddy:</label>
+      <input name="name" placeholder="Name your buddy" />
+    </fieldset>
+    <button type="submit">Adopt!</button>
+  </form>
+</section>
+
+<% if @buddies.any? %>
+<section>
+  <form action="/shelters" method="post">
+    <p>Build a shelter!</p>
+    <button type="submit">Gimme shelter!</button>
+  </form>
+</section>
+<% end %>
