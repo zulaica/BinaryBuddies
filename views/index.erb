@@ -1,3 +1,14 @@
+<section>
+  <form action="/users" method="post">
+    <fieldset>
+      <legend>Who are you?</legend>
+      <label for="name">User Name:</label>
+      <input name="name" placeholder="USER NAME" />
+    </fieldset>
+    <button type="submit">Figure it out</button>
+  </form>
+</section>
+
 <% if @buddies.any? %>
 <section>
   <dl>
@@ -18,7 +29,7 @@
     <button type="submit">Swat at it</button>
     <button type="submit">Name it</button>
   </form>
-  
+
 </section>
 <% end %>
 

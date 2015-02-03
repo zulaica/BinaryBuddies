@@ -10,5 +10,8 @@ RSpec.configure do |config|
     BinaryBuddy.all.each do |buddy|
       buddy.destroy
     end
+    User.all.each do |user|
+      user.destroy
+    end
   end
 end

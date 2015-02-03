@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe BinaryBuddy do
   it { should belong_to :user }
-  it { should validate_presence_of(:name) }
+  it { should validate_presence_of :name }
 
   describe "before save" do
     before(:each) do
