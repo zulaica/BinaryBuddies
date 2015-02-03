@@ -5,7 +5,7 @@ Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 get "/" do
   @buddies = BinaryBuddy.all
-  erb(:index)
+  erb :index
 end
 
 post "/buddies" do
@@ -21,9 +21,9 @@ post "/users" do
   @user_id = the_user.id
 
   url = "/users/" + @user_id.to_s
-  redirect(url)
+  redirect url
 end
 
 get "/users/:id" do
-  erb(:user)
+  erb :user
 end

@@ -1,5 +1,6 @@
 class BinaryBuddy < ActiveRecord::Base
   belongs_to :user
+  belongs_to :shelter
   validates :name, presence: true
   before_save :set_initial_levels
 
