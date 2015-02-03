@@ -9,18 +9,18 @@
     <% end %>
   </dl>
 </section>
-<% end %>
-
+<% else %>
 <section>
+  <p>… suddenly, a cloud of zeroes and ones swarms around your head.</p>
   <form action="/buddies" method="post">
-    <fieldset>
-      <legend>Adopt a buddy!</legend>
-      <label>Name your buddy:</label>
-      <input name="name" placeholder="Name your buddy" />
-    </fieldset>
-    <button type="submit">Adopt!</button>
+    <label>Name the cloud:</label>
+    <input name="name" placeholder="Name the cloud" />
+    <button type="submit">Swat at it</button>
+    <button type="submit">Name it</button>
   </form>
+  
 </section>
+<% end %>
 
 <% if @buddies.any? %>
 <section>

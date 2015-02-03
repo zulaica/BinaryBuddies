@@ -1,0 +1,206 @@
+/*
+* --------------------------------------------------------------------------
+* Foundation
+* --------------------------------------------------------------------------
+*/
+*::before, *::after, * {
+  /*
+  Apply a more natural box layout model to all elements. This can be
+  overridden by setting a specific element's `box-sizing:` to `content-box`.
+  */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /*
+  Establish custom easing function.
+  */
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html, body {
+  margin: 0;
+}
+
+html {
+  /*
+  Prevent fonts from automatically zooming in mobile browsers. A value of
+  `100%` still allows for pinch-zoom input. (`none` disables pinch-zoom.)
+  */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /*
+  Basic typography sets the foundation for vertical rhythm and relative size
+  between elements.
+  */
+  font-size: 16px;
+  line-height: 1.5em;
+  vertical-align: baseline;
+  /*
+  Ligagures and kerning are ALL over the place.
+  */
+  text-rendering: optimizeLegibility;
+  -webkit-font-variant-ligatures: common-ligatures discretionary-ligatures;
+  -moz-font-variant-ligatures: common-ligatures discretionary-ligatures;
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
+  /*
+  Chrome and Opera do not support the `auto` value for hyphens:. Chrome does
+  support `none`, however.
+  http://caniuse.com/#feat=css-hyphens
+  */
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  /*
+  Render fonts consistently. Without these, fonts flicker in Safari and links
+  get bolder on :hover in Chrome. Need to explore this issue more. Mozilla
+  looks best left alone but shooting for consistency for the time being; this
+  might eventually be a Webkit-specific "fix" if I decide it's okay for
+  Mozilla to render differently.
+  */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  outline: 0;
+}
+
+button,
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+  outline: 0;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  display: none;
+}
+
+
+
+
+
+/*
+* --------------------------------------------------------------------------
+* Global
+* --------------------------------------------------------------------------
+*/
+html,
+body,
+header,
+footer,
+fieldset {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+html {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #222;
+  color: #888;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+}
+
+body {
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  margin: auto;
+  padding: 0;
+  width: 40rem;
+}
+
+a {
+  border-color: #444;
+  color: #888;
+  font-weight: bold;
+  -webkit-transition-duration: .1s;
+  transition-duration: .1s;
+}
+  a:hover,
+  a:active,
+  a:focus {
+    border-color: #888;
+  }
+  a::before {
+    color: #444;
+    font-family: FontAwesome;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1em;
+    vertical-align: baseline;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+  }
+  a:hover::before,
+  a:active::before,
+  a:focus::before {
+    color: #888;
+  }
+  a[href*="github.com"]::before {
+    content: "\f09b\0020";
+  }
+
+header,
+main,
+footer {
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+header {
+  border-bottom: 3px double #444;
+}
+
+h1 {
+  -webkit-flex: 1 100%;
+  -ms-flex: 1;
+  flex: 1 100%;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+main {
+  -webkit-flex: 1 100%;
+  -ms-flex: 1;
+  flex: 1 100%;
+  overflow: auto;
+}
+
+footer {
+  height: auto;
+  border-top: 1px solid #444;
+}
