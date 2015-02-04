@@ -6,5 +6,11 @@ Is a browser-based digital pet simulator.
 
 Binary Buddies is written and maintained by [David Zulaica](http://zulaica.info).
 
+### Contributers
+
+- [Tina Ramsey](http://github.com/tinaramsey87)
+
+### Testers
+
 ## License
 Licensed under GNU GPL v2.0
