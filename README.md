@@ -1,4 +1,4 @@
-# Binary Buddies
+# Binary Buddies ༼ ❛ ‿ ❛ ༽
 
 Is a browser-based digital pet simulator.
 
