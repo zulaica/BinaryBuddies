@@ -66,8 +66,8 @@ html {
   might eventually be a Webkit-specific "fix" if I decide it's okay for
   Mozilla to render differently.
   */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  /*-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;*/
 }
 
 a {
@@ -126,8 +126,8 @@ html {
   -ms-flex-align: center;
   align-items: center;
   background: #222;
-  color: #888;
-  font-family: "Anonymous Pro", monospace;
+  color: #aaa;
+  font-family: "Fira Mono", monospace;
   font-weight: 400;
 }
 
@@ -142,7 +142,7 @@ body {
 
 a {
   border-color: #444;
-  color: #888;
+  color: #bbb;
   font-weight: bold;
   -webkit-transition-duration: .1s;
   transition-duration: .1s;
@@ -171,6 +171,9 @@ a {
   a[href*="github.com"]::before {
     content: "\f09b\0020";
   }
+  a[href$="#credits"]::before {
+    content: "";
+  }
 
 header,
 main,
@@ -180,8 +183,13 @@ footer {
   flex-flow: row wrap;
 }
 
+header,
+footer {
+  padding: 1rem 0 ;
+}
+
 header {
-  border-bottom: 3px double #444;
+  border-bottom: 3px double #555;
 }
 
 h1 {
@@ -200,11 +208,19 @@ main {
   overflow: auto;
 }
 
-footer {
-  height: auto;
-  border-top: 1px solid #444;
+button,
+input,
+textarea {
+  text-transform: uppercase;
 }
 
+footer {
+  border-top: 1px solid #555;
+}
+
+footer p {
+  margin-top: 0;
+}
 
 
 
@@ -214,6 +230,3 @@ footer {
 *
 * --------------------------------------------------------------------------
 */
-[action="/users"] input {
-  text-transform: uppercase;
-}
