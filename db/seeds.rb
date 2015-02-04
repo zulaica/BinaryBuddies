@@ -1,1 +1,7 @@
-Shelter.create(capacity: 1, durability: 1, shelter_type: "Hole in the ground")
+Shelter.create(capacity: 1, durability: 1, variety: "Hole in the ground")
+Shelter.create(capacity: 1, durability: 2, variety: "Hollow log")
+Shelter.create(capacity: 1, durability: 2, variety: "Crappy hut")
+Shelter.create(capacity: 1, durability: 3, variety: "Mud hut")
+Shelter.create(capacity: 1, durability: 4, variety: "Small fur tent")
+Shelter.create(capacity: 2, durability: 4, variety: "Medium fur tent")
+Shelter.create(capacity: 3, durability: 4, variety: "Large fur tent")
